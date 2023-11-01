@@ -71,7 +71,7 @@ public class PerformanceDAO { // 기능을 구현하는데 DAO
 
 	public List<PerformanceVO> searchPerformancesByName(String searchName) {
 		List<PerformanceVO> performanceList = new ArrayList<>();
-		String sql = "SELECT * FROM Performance WHERE p_name LIKE ?"; // 부분 일치 검색
+		String sql = "SELECT * FROM Performance WHERE  p_name LIKE ?"; // 부분 일치 검색
 		// where : 조건
 		try (Connection conn = DBUtil.getConnection(); PreparedStatement pst = conn.prepareStatement(sql)) {
 
@@ -107,7 +107,7 @@ public class PerformanceDAO { // 기능을 구현하는데 DAO
 			pst.setString(1, "%" + searchDirector + "%"); // 입력된 감독 이름과 부분 일치하는 데이터 검색
 
 			try (ResultSet rs = pst.executeQuery()) {
-				while (rs.next()) {
+				while (rs.next()) {					
 					PerformanceVO performance = new PerformanceVO();
 					// 필요한 데이터를 PerformanceVO 객체에 설정
 					performance.setP_id(rs.getInt("p_id"));

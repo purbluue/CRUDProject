@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
 	
 		//session에 로그인 정보를 저장하기 (있으면 얻기, 없으면 생성)
 		HttpSession session = request.getSession();
+		session.setAttribute("user_id", userid);
 		System.out.println(user);
 		if(user==null) {
 			session.setAttribute("loginResult", "아이디와 비밀번호를 확인하세요.");

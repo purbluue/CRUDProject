@@ -14,7 +14,7 @@
 <body>
 
 	<div class="container mt-3">
-		<h2>공황장애 극복 프로젝트</h2>
+		<h2>불만사항 접수</h2>
 		<p>불만 사항을 입력해 주세요.</p>
 		<form action="receipt.do" method="post">
 			<div class="mb-3 mt-3">

@@ -144,7 +144,7 @@ public class PController {
 						
 					}case 2: {
 						System.out.println("정보 변경");
-						List<UserTableVO> ulist = uservice.getUpdateUser(user_id);
+						//List<UserTableVO> ulist = uservice.getUpdateUser(user_id);
 					}
 						
 					}

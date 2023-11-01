@@ -118,7 +118,7 @@
 				<a href="#">PERFORMANCE</a>
 				<ul class="submenu">
 					<li><a id=plist href="#">공연 조회</a></li>
-					<li><a href="#">공연 검색</a></li>
+					<li><a id=search href="#">공연 검색</a></li>
 					<li><a id=pslist href="#">공연시작일순</a></li>
 					<li><a href="#">관심공연등록</a></li>
 				</ul>
@@ -126,10 +126,10 @@
 			<li>
 				<a href="#">MYPAGE</a>
 				<ul class="submenu">
-					<li><a href="#">정보조회</a></li>
-					<li><a href="#">정보수정</a></li>
+					<li><a id=myinfo href="#">내정보조회</a></li>
+					<li><a id=update href="#">정보수정</a></li>
 					<li><a href="#">관심목록조회</a></li>
-					<li><a href="#">탈퇴</a></li>
+					<li><a id=delete href="#">탈퇴</a></li>
 				</ul>
 			</li>
 			<li>
@@ -155,6 +155,22 @@
 		document.querySelector("#pslist").addEventListener("click", function (event) {
 			event.preventDefault(); // 기본 링크 동작을 막습니다.
 			location.href = "./pmce/pslist.do"; // 원하는 URL로 이동합니다.
+		});
+		document.querySelector("#search").addEventListener("click", function (event) {
+			event.preventDefault(); // 기본 링크 동작을 막습니다.
+			location.href = "./pmce/search.jsp"; // 원하는 URL로 이동합니다.
+		});
+		document.querySelector("#myinfo").addEventListener("click", function (event) {
+			event.preventDefault(); // 기본 링크 동작을 막습니다.
+			location.href = "views/myinfo.do"; // 원하는 URL로 이동합니다.
+		});
+		document.querySelector("#update").addEventListener("click", function (event) {
+			event.preventDefault(); // 기본 링크 동작을 막습니다.
+			location.href = "views/userupdate.do"; // 원하는 URL로 이동합니다.
+		});
+		document.querySelector("#delete").addEventListener("click", function (event) {
+			event.preventDefault(); // 기본 링크 동작을 막습니다.
+			location.href = "views/userdelete.do"; // 원하는 URL로 이동합니다.
 		});
 		document.querySelector("#receipt").addEventListener("click", function (event) {
 			event.preventDefault(); // 기본 링크 동작을 막습니다.

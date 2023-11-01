@@ -21,8 +21,8 @@ public class PerformanceService {
 		return dao.getPerformancesByStartDate();
 	}
 
-	public List<PerformanceVO> searchPerformancesByName(String searchName) {
-		return dao.searchPerformancesByName(searchName);
+	public List<PerformanceVO> searchPerformancesByName( String searchName) {
+		return dao.searchPerformancesByName( searchName);
 	}
 
 	public List<PerformanceVO> searchPerformancesByDirector(String searchDirector) {
