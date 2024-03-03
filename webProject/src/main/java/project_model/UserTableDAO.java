@@ -96,27 +96,21 @@ public class UserTableDAO {
 		return user;
 	}
 
-	public int userdelete(String user_id) { // 기능구현자리
-		UserTableVO user = null;
-		String sql = "DELETE FROM UserTable WHERE user_id = ? ";
-		conn = DBUtil.getConnection();
+	public int userdelete(String user_id) {
+	    int resultCount = 0;
+	    String sql = "DELETE FROM UserTable WHERE user_id = ?";
+	    conn = DBUtil.getConnection();
 
-		try {
-			pst = conn.prepareStatement(sql);
-			pst.setString(1, user_id);
-			rs = pst.executeQuery();
-			if (rs.next()) {
-				user = makeUser(rs);
-				// reset에서 읽어서 VO만들기
-			}
-
-		} catch (SQLException e) {
-
-			e.printStackTrace();
-		} finally {
-			DBUtil.dbDisconnect(conn, pst, rs);
-		}
-		return resultCount;
+	    try {
+	        pst = conn.prepareStatement(sql);
+	        pst.setString(1, user_id);
+	        resultCount = pst.executeUpdate();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    } finally {
+	        DBUtil.dbDisconnect(conn, pst, null); // ResultSet을 사용하지 않으므로 rs는 null로 전달.
+	    }
+	    return resultCount;
 	}
 
 	private UserTableVO makeUser(ResultSet rs) throws SQLException {
