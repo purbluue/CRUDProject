@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>SHOWº½</title>
 	<style>
 		body {
     		margin: 120; /*0*/
@@ -99,7 +99,7 @@
 </head>
 
 <body>
-	<h1>PERFORMANCE INFORMATION</h1>
+	<h1>SHOWº½</h1>
 	<div id="logindiv">
 	<button id="logout">·Î±×¾Æ¿ô</button>
 	</div>
@@ -115,7 +115,7 @@
 				</ul>
 			</li>
 			<li>
-				<a href="#">PERFORMANCE</a>
+				<a href="#">SHOW</a>
 				<ul class="submenu">
 					<li><a id=plist href="#">°ø¿¬ Á¶È¸</a></li>
 					<li><a href="#">°ø¿¬ °Ë»ö</a></li>

@@ -3,57 +3,55 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>SHOW봄</title>
 	<style>
 		body {
-    		margin: 120; /*0*/
-    		background-image: url(static/image/texture.jpg), url(static/image/texture.jpg); /* 이미지 파일의 경로를 지정해야 합니다. */
-   			background-size: auto 95%, auto 95%; /* 이미지를 화면 크기에 맞게 늘립니다. */ /*166*/
-    		background-position: left, right; 
-    		background-repeat: repeat-y, repeat-y; /* 이미지 반복 없음 */
+			margin: 120;
+			/*0*/
 		}
 	
 		#logindiv {
 			width: 800px;
 			text-align: right;
 			margin: auto;
+			margin-top: -87px;
 		}
-		 #login, #join {
-            background-color: rgb(213, 232, 218);
-            outline: 2px solid #898989; /* 아웃라인 색 및 두께 설정 */
-            border: none;
-            color: rgb(0, 64, 0);
-            padding: 3px 10px;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        #login:hover, #join:hover {
-            background-color: rgb(0, 64, 128);
-        }
+	
+		.button-text {
+			border: none;
+			color: rgb(255, 128, 192);
+			padding: 3px 10px;
+			margin: 5px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: 600;
+			background: none;
+			border: none;
+			outline: none;
+		}
+	
 		h1 {
 			margin: 30px auto;
-			color: rgb(87, 215, 189);
+			color: rgb(255, 128, 192);
 			text-align: center;
 			font-size: 3rem;
 		}
-
+	
 		* {
 			padding: 0;
 			margin: 0
 		}
-
+	
 		li {
 			list-style: none;
 		}
-
+	
 		a {
 			text-decoration: none;
 			font-size: 14px
 		}
-
+	
 		.menu {
 			display: table;
 			table-layout: fixed;
@@ -61,47 +59,51 @@
 			margin: 20px auto;
 			text-align: center;
 		}
-
+	
 		.menu>li {
 			display: table-cell;
 			text-align: center;
 			line-height: 40px;
-			background-color: rgb(28, 115, 98);    /* #5778ff;*/
+			background-color: rgb(183, 87, 185);
+			/* #5778ff;*/
 		}
-
+	
 		.menu a {
 			color: #fff;
 		}
-
+	
 		.submenu>li {
 			line-height: 50px;
-			background-color: rgb(87, 215, 189); /* #94a9ff;*/
+			background-color: rgb(200, 175, 218);
+			/* #94a9ff;*/
 		}
-
+	
 		.submenu {
 			height: 0;
 			/*ul의 높이를 안보이게 처리*/
 			overflow: hidden;
 		}
-
+	
 		.menu>li:hover {
-			background-color: rgb(38, 164, 138);  /* #94a9ff;*/
+			background-color: rgb(128, 0, 128);
+			/* #94a9ff;*/
 			transition-duration: 0.5s;
 		}
-
+	
 		.menu>li:hover .submenu {
 			height: 200px;
 			/*서브메뉴 li한개의 높이 50*5*/
 			transition-duration: 1s;
-			}
+		}
 	</style>
 </head>
 
 <body>
-	<h1>PERFORMANCE INFORMATION</h1>
+	<h1><img src="./static/image/showBOM.png" alt="SHOW봄" style="width: 200px; height: 200px;"></h1>
+		
 	<div id="logindiv">
-	<button id="login">로그인</button>
-	<button id="join">회원가입</button>
+	<button id="login" class="button-text">로그인</button>
+	<button id="join" class="button-text">회원가입</button>
 	</div>
 	<body>
 		<ul class="menu">
